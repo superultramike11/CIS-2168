@@ -60,8 +60,9 @@ public class Leader<E> {
 	   E removed = first.data;
 	   if(first == last)
 		   first = last = null;
-	   else
-		   first = first.next; 
+	   else {
+           first = first.next;
+       }
 	   size--; 
 	   return removed;
    }
