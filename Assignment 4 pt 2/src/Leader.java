@@ -24,14 +24,6 @@ public class Leader<E> {
 
    // constructor: explicitly initializes an empty list 
    public Leader() { size = 0; first = last = null; }
-   
-   /*
-    * 1: Create list  
-    * 2: from 1 to m-1
-    * 		addLast(removeFirst())
-    * 3: removeFirst()
-    * 		print this so you see elimination
-   */
  
    public static void main(String[] args) {
 	   int n=9; // # of people in group

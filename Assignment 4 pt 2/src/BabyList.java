@@ -61,7 +61,7 @@ public class BabyList<E> implements Iterable<E> {
          current = current.next;
          return value;
       }
-   } 
+   }
 
    // is this list empty?
    public boolean isEmpty() {return n == 0;}

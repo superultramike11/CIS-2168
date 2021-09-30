@@ -15,7 +15,7 @@ public class BabyListEfficiencyTest {
       testGetNoIterator(list, numOfTests);
 
       // 2-nd batch of tests: SLList without an Iterator
-      testIteratorNext(list, numOfTests); 
+      //testIteratorNext(list, numOfTests);
 
    }
 
