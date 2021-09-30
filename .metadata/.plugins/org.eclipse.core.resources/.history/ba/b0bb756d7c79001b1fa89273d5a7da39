@@ -1,0 +1,13 @@
+
+public class NewStuff {
+	public static int func(int x) {
+		
+		return x;
+	}
+	public static void main(String args[]) {
+		int x=10;
+		x*=2;
+		func(x);
+		System.out.println(x);
+	}
+}

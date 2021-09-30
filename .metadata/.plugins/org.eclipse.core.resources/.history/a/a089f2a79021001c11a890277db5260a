@@ -1,0 +1,136 @@
+import java.util.NoSuchElementException;
+
+public class Leader<E> {
+   public int size;        // size of the list
+   private Node first;    // reference to the first node of the list THE HEAD
+   private Node last;    // reference to the last node of the list THE TAIL
+
+   // Private helper Node data type
+   private class Node {
+      E data;
+      Node next;
+
+      // constructor: initializes data to the value e and
+      // initializes the next Node reference to null
+      Node(E e) { this(e, null); }
+
+      // constructor: initializes data to the value e and
+      // initializes the next Node reference to node
+      Node(E e, Node node) {
+         data = e; 
+         next = node;
+      }
+   }
+
+   // constructor: explicitly initializes an empty list 
+   public Leader() { size = 0; first = last = null; }
+   
+   /*
+    * 1: Create list 
+    * 2: from 1 to m-1
+    * 		removeFirst() AND addLast()
+    * 		addLast(removeFirst())
+    * 3: removeFirst()
+    * 		print this so you see elimination
+   */
+   
+   /*
+    * Go to the 5th element and delete it
+    * 
+    * */
+ 
+   public static void main(String[] args) {
+	   int n=9; // # of people in group
+	   int m=5; // rate of picking person
+	   Leader<Integer> list; 
+	   list = new Leader<>();
+	   
+	   for(int i=1; i<=n; i++) {
+	    	list.addLast(i);
+	   } 
+	   
+	   System.out.println(list);
+	   
+	   while(n != 0) {
+		   for(int i=1; i<m; i++) { 
+			   list.addLast(list.removeFirst());
+			   list.removeFirst(); 
+			   System.out.println(list);
+		   }
+		   n--;
+	   }
+	   
+	   
+	   /*
+	   while(n != 0) {
+		   for(int i=1; i<m-1; i++) {
+			   list.removeFirst();
+			   list.addLast(list.removeFirst());
+			   System.out.println(list);
+			   n--; 
+		   }
+	   }
+	   */
+	}
+   
+   // Inserts element as the first element of the list
+   public void addFirst(E element) { 
+	   if(isEmpty()) {
+		   first = last = new Node(element);
+	   }
+	   else {
+		   first = new Node(element, first);
+	   }
+	   size++;
+   }
+   
+   // does the list contain element?
+   public boolean contains(E element) {
+	   	Node current = first;
+	    while(current != null){
+	        if(element.equals(current.data)) {
+	            return true;
+	        }
+	        current = current.next;
+	    }
+	    return false;
+   }
+   
+   // Inserts element as the last element of the list
+   public void addLast(E value) { 
+	   if(isEmpty()) first = last = new Node(value);
+	   else last = last.next = new Node(value);
+	   size++;
+   }
+    
+   // Removes and returns the first element of the list
+   public E removeFirst() {
+	   if(isEmpty()) throw new NoSuchElementException("nothing in the list"); {}
+	   E removed = first.data;
+	   if(first == last)
+		   first = last = null;
+	   else
+		   first = first.next; 
+	   size--; 
+	   return removed;
+   }
+   
+   // Is this list empty? Returns true if it is and false if it is not
+   public boolean isEmpty() {return size == 0;}
+
+   // Returns the number of items in the list
+   public int size() { return size; }
+
+   // returns a string representation of this list
+   public String toString() {
+      StringBuilder s = new StringBuilder(); 
+      if (isEmpty()) return "This list is empty";
+      Node current = first;
+      while(!(current == null)) {
+    	  s.append( current.data + ", "); 
+    	  current = current.next;
+      }
+      s.append("NULL"); 
+      return s.toString();
+   } 
+}

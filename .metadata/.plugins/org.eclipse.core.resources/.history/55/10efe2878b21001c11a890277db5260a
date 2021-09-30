@@ -1,0 +1,15 @@
+public class SLListTest<E> {
+   public static void main(String[] args) {
+      Leader<Integer> list;
+      int n=9;
+      int m=5;
+      list = new Leader<>();
+      
+      for(int i=1; i<=m; i++) {
+    	  list.addLast(i);
+      }
+      
+      System.out.println(list); // empty
+      
+   }
+}

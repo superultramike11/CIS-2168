@@ -1,0 +1,12 @@
+
+public class NewStuff {
+	public static void func(String base, String prefix, String suffix) {
+		base = prefix+base+suffix;
+	}
+	public static void main(String args[]) {
+		int x=10;
+		
+		x=func(x);
+		System.out.println(x);
+	}
+}

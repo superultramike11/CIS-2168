@@ -1,0 +1,43 @@
+--- Testing addFirst(), addLast(), removeFirst(), removeLast() ---
+6 -> 8 -> NULL
+This list is empty
+2 -> 1 -> NULL
+2 -> NULL
+This list is empty
+
+--- Testing add(), indexOf() ---
+1 -> 6 -> NULL
+Index out of bounds. Cannot add this value.
+2 -> 1 -> 6 -> 8 -> NULL
+2 -> 1 -> 2168 -> 6 -> 8 -> NULL
+true true
+Index out of bounds. Cannot add this value.
+false
+77 -> 2 -> 1 -> 2168 -> 6 -> 99 -> 8 -> NULL
+6 1 -1
+
+---Testing remove() ---
+Starting with this list: 77 -> 2 -> 1 -> 2168 -> 6 -> 99 -> 8 -> NULL
+Removing item at index 0: 2 -> 1 -> 2168 -> 6 -> 99 -> 8 -> NULL
+Removing item at index 2: 2 -> 1 -> 6 -> 99 -> 8 -> NULL
+Trying to remove items at indexes -1, 99:
+Index out of bounds. Cannot add this value.
+remove(-1) returns false
+Index out of bounds. Cannot add this value.
+remove(99) returns false
+The list now is: 2 -> 1 -> 6 -> 99 -> 8 -> NULL
+Removing item at index 3: 2 -> 1 -> 6 -> 8 -> NULL
+
+---Testing get(), set() ---
+1 6
+Index out of bounds. Returning null.
+null
+Index out of bounds. Cannot set this value.
+Index out of bounds. Cannot set this value.
+Index out of bounds. Cannot set this value.
+2 -> 1 -> 6 -> 8 -> NULL
+8 -> 6 -> 1 -> 2 -> NULL
+
+---Testing contains() ---
+false true false true
+true false true false

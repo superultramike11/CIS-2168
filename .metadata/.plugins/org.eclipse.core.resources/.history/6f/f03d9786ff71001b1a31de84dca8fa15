@@ -1,0 +1,143 @@
+import java.util.Scanner;
+
+public class StringPractice {
+	public static void main(String[] args) { 
+		/*
+		Scanner input = new Scanner(System.in);
+		
+		// Execute isFace function
+		System.out.print("isFace Function: ");
+		String s = input.next();
+		char c = s.charAt(0);
+		isFace(c);
+		
+		// Execute indexOfFirstFace function
+		indexOfFirstFace(s);
+		
+		// Execute reversed function
+		reversed(s);
+		*/
+    } 
+	
+	// returns true if c is one of the characters typically used to represent a "face card" in a standard deck of playing cards.
+	public static boolean isFace(char c) {
+		if (c == 'J' || c == 'j' || c == 'Q' || c == 'q' || c == 'K' || c == 'k' || c == 'A' || c == 'a') {
+			System.out.println("Returned true and represents a face card. \n");
+			return true;
+		} 
+		else {
+			return false;
+		}
+	}
+	
+	// returns the index of the first face-card letter in s or -1 if s contains no face-card letters
+	public static int indexOfFirstFace(String s) {
+		//System.out.println(s);
+		for (int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if (isFace(c) == true) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	/*
+	* returns the index of the first occurrence of a face-card letter in s starting from index
+	* startPosition or -1 if there are none at index startPosition or later. 
+	* 
+	* Notice that this method has the same name as the previous one, but that it takes a different number of arguments. This
+	* is perfectly legal in Java. It's called "method overloading"
+	*/
+	
+	public static int indexOfFirstFace(String s, int startPosition) {
+		// instead of int i=0 -> i=start position
+		return -1;
+	}
+  
+	// returns the index of the last occurrence of a face-card letter in s or -1 if s contains none
+	public static int indexOfLastFace(String s) {
+		// i = 0 -> i = s.length()-1; i >= 0; i--
+		for (int i = s.length()-1; i >= 0; i--) {
+			char c = s.charAt(i);
+			if (isFace(c) == true) {
+				return i;
+			}
+		}
+		return -1;
+	}
+  
+	// returns s in reverse. For example, if s is "Apple", the method returns the String "elppA"
+	public static String reversed(String s) {
+		// String reverse = "";
+		/* for (i) {
+			reverse += s.charAt(i) // append a letter to the string -> "+="
+			}
+		*/
+		String reverse = new StringBuffer(s).reverse().toString();
+		System.out.println("String Reversed: "+reverse);
+		return s;
+	}
+  
+	// returns the number of times that n occurs in h. For example, if h is "Mississippi" and n is "ss" the method returns 2.
+	public static int numOccurrences(String h, String n) {
+		// write a loop that goes through all the strings and adds 1 to n everytime
+		int count = 0;
+		while(h.contains(n)) {
+			count++;
+		}
+		return count;
+	}
+  
+	// returns true if s is the same backwards and forwards and false otherwise
+	public static boolean sameInReverse(String s) {
+		if(s.equals(reversed(s))) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+  
+	// returns a new String which is the same as s, but with all of the face-card letters removed.
+	public static String withoutFaces(String s) {
+		//.charAt
+		// String remove = "" ; -> capture all the letters that are not face-card letters.
+		return "";
+	}
+
+	// returns true if s consists only of face-card letters or false otherwise
+	public static boolean containsOnlyFaces(String s) {
+		// .charAt
+		//check isFace
+		// if isFace == false, return false
+		// if all letters pass the isFace then, return true
+		return true;
+	}  
+  
+	// returns true if s contains no face-card letters or false otherwise
+	public static boolean containsNoFaces(String s) {
+		// if isFace == false
+		// return true;
+		// if isFace == true
+		// return false
+		return true;
+	}
+  
+	/*
+	* Passed a reference to a person's name in the form FIRST_NAME LAST_NAME. The method returns a
+	* reference to a new String in the form LAST_NAME, FIRST_NAME.
+	*
+	* For example, if we were passed "Spongebob Squarepants", we'd return "Squarepants, Spongebob".
+	* You may assume that the method is passed exactly two words separated by a single space.
+	*/
+	public static String lastFirst(String s) {
+		// array -> list [0] [1] [2]
+		/*
+		 * String[] -> string array -> name = s.split(" ") -> split the input by a space
+		 * name[0] = Spongebob
+		 * name[1] = Squarepants
+		 */
+		return ""; // print(name[0] + ", " + name[1]);
+	}
+}

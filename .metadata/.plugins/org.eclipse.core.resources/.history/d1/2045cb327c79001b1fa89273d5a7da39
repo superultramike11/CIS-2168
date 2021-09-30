@@ -1,0 +1,15 @@
+
+public class NewStuff {
+	public static void func(int x, int y, int z) {
+		x++;
+		y+=z%2;
+		z*=2;
+		System.out.println(z);
+	}
+	public static void main(String args[]) {
+		int x=10;
+		
+		func(x);
+		System.out.println(x);
+	}
+}

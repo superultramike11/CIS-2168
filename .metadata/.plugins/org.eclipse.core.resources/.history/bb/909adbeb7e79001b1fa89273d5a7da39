@@ -1,0 +1,16 @@
+public class NewStuff {
+	public static void main(String args[]) {
+		int a=1, b=2, c=3;
+		if (a * 2 < b) {
+		a*=3;
+		c-=b;
+		}
+		if (b < a) {
+		b++;
+		} else {
+		a--;
+		c++;
+		}
+		System.out.println(a + " " + b + " " + c);
+	}
+}

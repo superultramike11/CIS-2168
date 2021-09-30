@@ -1,0 +1,15 @@
+
+public class NewStuff {
+	public static String func(String base, String prefix, String suffix) {
+		base = prefix+base+suffix;
+		return base;
+	}
+	public static void main(String args[]) {
+		String r="ject";
+		String p="con";
+		String s="ure";
+		
+		func(r, p, s);
+		System.out.println(r);
+	}
+}

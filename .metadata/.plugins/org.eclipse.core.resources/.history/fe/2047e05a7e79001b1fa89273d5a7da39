@@ -1,0 +1,17 @@
+public class NewStuff {
+	public static void main(String args[]) {
+		int a=5, b=3, c=2;
+		
+		if (c < a) {
+			c-=a;
+			} else if (b < a) {
+			b-=a;
+			}
+			if (a + b > c) {
+			a+=10;
+			} else {
+			b+=10;
+			}
+		System.out.println(a + " " + b + " " + c);
+	}
+}

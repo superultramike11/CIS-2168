@@ -1,0 +1,14 @@
+
+public class NewStuff {
+	public static void func(int x, int y, int z) {
+		x++;
+		y+=z%2;
+		z*=2;
+	}
+	public static void main(String args[]) {
+		int x=10, y=20,z=30;
+		
+		func(y,z,x);
+		System.out.println(x);
+	}
+}

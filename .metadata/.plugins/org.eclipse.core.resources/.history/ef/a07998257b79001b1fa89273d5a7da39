@@ -1,0 +1,12 @@
+
+public class NewStuff {
+	public static void func(int x) {
+		x++;
+		System.out.println(x);
+	}
+	public static void main(String args[]) {
+		int y=10;
+		
+		func(y);
+	}
+}

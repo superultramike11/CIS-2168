@@ -1,0 +1,13 @@
+
+public class NewStuff {
+	public static void f1() {
+		System.out.println("a");
+	}
+	public static void f2() {
+		f1();
+		System.out.println("a");
+	}
+	public static void f1() {
+		System.out.println("a");
+	}
+}

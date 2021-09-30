@@ -1,0 +1,16 @@
+
+public class NewStuff {
+	public static void main(String args[]) {
+		String s1="bob";
+		String s2="lob";
+		String s3="law";
+		for (int i=0; i<4; i++) {
+		if (i%2==0) {
+		s1+=s2;
+		} else {
+		s2=s1+s3;
+		}
+		}
+		System.out.println(s1);
+	}
+}

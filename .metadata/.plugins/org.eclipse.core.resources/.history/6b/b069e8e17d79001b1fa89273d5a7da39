@@ -1,0 +1,19 @@
+public class NewStuff {
+	public static void f1() {
+		System.out.println("a");
+	}
+	public static void f2() {
+		f1();
+		System.out.println("b");
+	}
+	public static void f3() {
+		f2();
+		f1();
+		System.out.println("c");
+	}
+	
+	public static void main(String args[]) {
+		f3();
+		System.out.println();
+	}
+}
