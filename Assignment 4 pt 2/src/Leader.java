@@ -34,8 +34,8 @@ public class Leader<E> {
    */
  
    public static void main(String[] args) {
-	   int n=1000000; // # of people in group
-	   int m=10; // rate of picking person
+	   int n=9; // # of people in group
+	   int m=5; // rate of picking person
 	   Leader<Integer> list; 
 	   list = new Leader<>();
 	   
