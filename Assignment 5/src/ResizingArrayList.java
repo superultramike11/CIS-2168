@@ -1,3 +1,5 @@
+import org.w3c.dom.Node;
+
 import java.util.*;
 
 public class ResizingArrayList<E> implements Iterable<E> {
@@ -26,22 +28,59 @@ public class ResizingArrayList<E> implements Iterable<E> {
    }
 
    // Adds the item to the end of this list.
-   public void add(E element) { } // TODO: IMPLEMENT IN CLASS
+   public void add(E element) {
+      if (n == elements.length) {
+         resize(2*elements.length);
+      }
+      elements[n++] = element;
+   } // TODO: IMPLEMENT IN CLASS
 
    // Adds the element at index.
-   public void add(int index, E element) { } // TODO: IMPLEMENT IN CLASS
+   public void add(int index, E element) {
+      if (index < 0 || index >= n) throw new ArrayIndexOutOfBoundsException();
+      if (n == elements.length) {
+         resize(2*elements.length); // double array size if necessary
+      }
+      // Shift data from index to n-1
+      for(int i=n; i>index; i--) {
+         elements[i] = elements[i-1];
+      }
+      elements[index] = element; // insert the new element
+      n++;
+   } // TODO: IMPLEMENT IN CLASS
 
    // Replaces the element at index with the given element
-   public void set(int index, E element) { } // TODO: IMPLEMENT IN CLASS
+   public void set(int index, E element) {
+      if (index < 0 || index >= n) throw new ArrayIndexOutOfBoundsException();
+      elements[index] = element;
+   } // TODO: IMPLEMENT IN CLASS
 
    // Returns the item at index without removing it
-   public E get(int index) { return elements[index]; } // TODO: IMPLEMENT IN CLASS
+   public E get(int index) {
+      if (index < 0 || index >= n) throw new ArrayIndexOutOfBoundsException();
+      return elements[index];
+   } // TODO: IMPLEMENT IN CLASS
 
    // Removes the element at position index
-   public void remove(int index) { } // TODO: IMPLEMENT IN CLASS
+   public void remove(int index) {
+      if (index < 0 || index >= n) throw new ArrayIndexOutOfBoundsException();
+      for(int i=index+1; i<n; i++) {
+         elements[i-1] = elements[i];
+      }
+      n--;
+   } // TODO: IMPLEMENT IN CLASS
 
    // Returns the index of the first occurrence of element or -1 if not found
-   public int indexOf(E element) { return -1; } // TODO: IMPLEMENT IN CLASS
+   public int indexOf(E element) {
+      int index = 0;
+      for (int i = 0; i < elements.length; i++) {
+         if(elements[i] == element) {
+            return index;
+         }
+         index++;
+      }
+      return -1;
+   } // TODO: IMPLEMENT IN CLASS
 
    @Override
    // Returns an iterator that iterates over the items in this list
