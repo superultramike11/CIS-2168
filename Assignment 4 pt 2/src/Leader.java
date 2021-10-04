@@ -45,6 +45,7 @@ public class Leader<E> {
 		   n--;
 	   }
 	   System.out.println("This number is the winner! " + list);
+       System.out.pritnln("End of program");
 	}
    
    // Inserts element as the last element of the list
