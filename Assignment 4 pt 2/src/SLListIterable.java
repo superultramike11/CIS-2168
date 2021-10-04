@@ -204,6 +204,22 @@ public class SLListIterable<E> implements Iterable<E>{
    } 
       
    public static void main(String[] args) {
+	   SLListIterable<Integer> list = new SLListIterable<>();
+	   list.add(0,2);
+	   list.add(1,1);
+	   list.add(2,6);
+	   list.add(3,8);
 
+	   System.out.print("Printing the list using for-each:        ");
+	   for (Integer integer : list)
+		   System.out.print(integer + " ");
+	   System.out.println();
+
+	   System.out.print("Printing the list using an Iterator:     ");
+	   Iterator<Integer> iterator = list.iterator();
+	   while (iterator.hasNext()) {
+		   Integer k = iterator.next();
+		   System.out.print(k + " ");
+	   }
    }
 }

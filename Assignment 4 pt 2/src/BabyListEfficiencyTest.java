@@ -3,7 +3,7 @@ import java.util.*;
 public class BabyListEfficiencyTest {
    public static void main(String[] args) {
       // create some list for testing
-      int n = 50000; // number of elements in the list // CHANGE THIS NUMBER TO RUN OTHER TESTS
+      int n = 200000; // number of elements in the list // CHANGE THIS NUMBER TO RUN OTHER TESTS
       BabyList<Integer> list = new BabyList<>();
       for (int i = 0; i < n; i++)
          list.add( i % 4);
@@ -12,10 +12,10 @@ public class BabyListEfficiencyTest {
       int numOfTests = 3; // number of tests whose average time to report (higher sample size -> more accurate results)
 
       // 1-st batch of tests: SLList without an Iterator
-      testGetNoIterator(list, numOfTests);
+      //testGetNoIterator(list, numOfTests);
 
       // 2-nd batch of tests: SLList without an Iterator
-      //testIteratorNext(list, numOfTests);
+      testIteratorNext(list, numOfTests);
 
    }
 
