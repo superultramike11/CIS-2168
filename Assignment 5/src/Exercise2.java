@@ -29,15 +29,6 @@ public class Exercise2<E> {
    // Returns the number of elements in the list.
    public int size() { return n; }
 
-   // Is this list empty?
-   public boolean isEmpty() { return n == 0;}
-
-   // Resizes the underlying array holding the elements
-   private void resize(int capacity) {
-      assert capacity >= n;
-      elements = Arrays.copyOf(elements, capacity);
-   }
-
    // exchanges the elements at positions i and j in the list
    private static void swap(int i, int j, List<Integer> list) { // all ops are constant time here
       int temp = list.get(j);
@@ -63,6 +54,11 @@ public class Exercise2<E> {
       System.out.println("result: " + result + "\n");  // should print [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 4, 4, 4, 4, 4, 4]
 
       //------------- ADD YOUR OWN TESTS HERE ---------------
+      list = new ArrayList<>(List.of(2,2,2,2,2,2,2,2,2,1,2,3,4,5,6,7,8,9,10));
+      System.out.println("list" + list); // should print [2,2,2,2,2,2,2,2,2,1,2,3,4,5,6,7,8,9,10]
+
+      result = moveToEnd(list, 2);
+      System.out.println("result: " + result + "\n");  // should print [1,3,4,5,6,7,8,9,10,2,2,2,2,2,2,2,2,2,2]
    }
 }
 
