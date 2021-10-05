@@ -46,19 +46,40 @@ public class Exercise2<E> {
       List<Integer> list;
       List<Integer> result;
 
-      //--------------------- TEST 1 -----------------------
-      list = new ArrayList<>(List.of(4, 4, 4, 4, 4, 4, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12));
-      System.out.println("list:" + list);  // should print [4, 4, 4, 4, 4, 4, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12]
-
-      result = moveToEnd(list, 4);
-      System.out.println("result: " + result + "\n");  // should print [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 4, 4, 4, 4, 4, 4]
-
-      //------------- ADD YOUR OWN TESTS HERE ---------------
-      list = new ArrayList<>(List.of(2,2,2,2,2,2,2,2,2,1,2,3,4,5,6,7,8,9,10));
-      System.out.println("list" + list); // should print [2,2,2,2,2,2,2,2,2,1,2,3,4,5,6,7,8,9,10]
-
+      /*------------- START TEST 1 ---------------*/
+      list = new ArrayList<>(List.of(2, 1, 2, 2, 2, 6, 8, 2));
       result = moveToEnd(list, 2);
-      System.out.println("result: " + result + "\n");  // should print [1,3,4,5,6,7,8,9,10,2,2,2,2,2,2,2,2,2,2]
+      System.out.println(result + "\n");  // should print [1, 6, 8, 2, 2, 2, 2, 2]
+
+      /*------------- START TEST 2 ---------------*/
+      list = new ArrayList<>(List.of(1, 2, 3, 4));
+      result = moveToEnd(list, 3);
+      System.out.println(result + "\n");  // should print [1, 2, 4, 3]
+
+      /*------------- START TEST 3 ---------------*/
+      list = new ArrayList<>(List.of(0, 8, 3, 0));
+      result = moveToEnd(list, 1);
+      System.out.println(result + "\n");  // should print [0, 8, 3, 0]
+
+      /*------------- START TEST 4 ---------------*/
+      list = new ArrayList<>(List.of(4, 4, 4, 4, 4, 4, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12));
+      result = moveToEnd(list, 4);
+      System.out.println(result + "\n");  // should print [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 4, 4, 4, 4, 4, 4]
+
+      /*------------- START TEST 5 ---------------*/
+      list = new ArrayList<>(List.of());
+      result = moveToEnd(list, 1);
+      System.out.println(result + "\n");  // should print []
+
+      /*------------- START TEST 6 ---------------*/
+      list = new ArrayList<>(List.of(1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 4, 4, 4, 4, 4, 4));
+      result = moveToEnd(list, 4);
+      System.out.println(result + "\n");  // should print [1, 2, 3, 6, 7, 8, 9, 10, 11, 12, 4, 4, 4, 4, 4, 4, 4]
+
+      /*------------- START TEST 7 ---------------*/
+      list = new ArrayList<>(List.of(1, 1, 1, 1, 1));
+      result = moveToEnd(list, 1);
+      System.out.println(result + "\n");  // should print [1, 1, 1, 1, 1]
    }
 }
 
