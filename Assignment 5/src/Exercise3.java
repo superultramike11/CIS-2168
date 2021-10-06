@@ -12,35 +12,21 @@ public class Exercise3 {
 
     public static int longestPeak(int[] array) {
         int longestPeakLength = 0;
-        int tempLength = 0;
-        /*
-        int j=1;
-        for (int i = 1; i < array.length-1; i++) {
-            if(isPeak(array, i)) {
-                System.out.println("index: " + i);
-                System.out.println("Value at element:" + array[i]);
-                longestPeakLength = i+1;
-                System.out.println("long Peak:" + longestPeakLength);
+        int i=1;
+        while(i < array.length-1) {
+            if (isPeak(array, i)) {
+                int left = i-1;
+                int right = i+1;
+                while(left > 0 && array[left-1] < array[left]) {
+                    left--;
+                }
+                while(right < array.length-1 && array[right+1] < array[right]) {
+                    right++;
+                }
+                longestPeakLength = Math.max(longestPeakLength, (right - left + 1));
+                i = right;
             }
             else {
-                //j++;
-            }
-        }
-        */
-        int i=1;
-
-        while(i < array.length-1) {
-            // if A[i] is a peak
-            if (isPeak(array, i)) {
-                // calculate the highestlength and assign it a temp length
-                // increment from the middle to both the left and right sides to figure out the bounds
-                // longestPeakLength = i + 1;
-                // if tempLength is longer
-                if (longestPeakLength > tempLength) {
-                    // replace previous length
-                    tempLength = longestPeakLength;
-                }
-            } else {
                 i++;
             }
         }
@@ -54,11 +40,9 @@ public class Exercise3 {
 
     // test cases for the longestPeak() method
     public static void main(String[] args) {
-
         int[] a = {1, 2, 4, 4, 5, 3, 9, 7, 6, 4, 2, 7, 8}; // peak 5
         System.out.println(longestPeak(a)); // longestPeak 6
 
-        /*
         int[] b = {5, 5, 7, 0}; // peak 7
         System.out.println(longestPeak(b)); // longestPeak 3
 
@@ -79,6 +63,5 @@ public class Exercise3 {
 
         int[] h = {1, 2, 3, 3, 4, 0, 8}; // peak 4
         System.out.println(longestPeak(h)); // longestPeak 3
-         */
     }
 }
