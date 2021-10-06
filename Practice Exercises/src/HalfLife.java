@@ -5,21 +5,21 @@ public class HalfLife {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the radioactive parent amount:");
-        int RP = sc.nextInt(); // 12
+        double RP = sc.nextInt(); // 12 or 25
 
         System.out.println("Enter the stable daughter amount (MUST BE BIGGER):");
-        int SD = sc.nextInt(); // 88
+        double SD = sc.nextInt(); // 88 or 75
 
         halflife(RP, SD);
     }
 
-    public static void halflife(int RP, int SD) {
-        int halflifes = 0;
+    public static void halflife(double RP, double SD) {
+        double halflives = 0;
 
-        while(SD >= RP) {
+        while(SD > RP) {
             SD /= 2;
-            halflifes++;
-            if(SD <= RP) System.out.println("Halflifes: " + halflifes);
+            halflives++;
+            if(SD < RP) System.out.println("# of Half Lives: " + halflives);
         }
     }
 }

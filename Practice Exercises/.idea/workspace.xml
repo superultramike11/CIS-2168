@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69ba958d-1d3f-4601-8d8a-6f6cd7d23129" name="Changes" comment="" />
+    <list default="true" id="69ba958d-1d3f-4601-8d8a-6f6cd7d23129" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Oct 3/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Oct 3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Oct 3/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Oct 3/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Oct 3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Oct 3/Oct 3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Oct 3/someInts.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Oct 3/src/In.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Oct 3/src/Reverse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Oct 3/src/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Oct 3/tobe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/HalfLife.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/HalfLife.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HalfLife.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HalfLife.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +41,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment 5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="HalfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
