@@ -23,7 +23,9 @@ public class Exercise3 {
                 while(right < array.length-1 && array[right+1] < array[right]) {
                     right++;
                 }
-                longestPeakLength = Math.max(longestPeakLength, (right - left + 1));
+                if(longestPeakLength<(right-left+1)) {
+                    longestPeakLength = (right - left + 1);
+                }
                 i = right;
             }
             else {
