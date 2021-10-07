@@ -1,28 +1,15 @@
-/******************************************************************************
- *
- *  Stack implementation with a resizing array.
- *
- *  % more tobe.txt
- *  to be or not to - be - - that - - - is
- *
- *  % java ResizingArrayStack < tobe.txt
- *  to be not that or be (2 left on stack)
- *
- ******************************************************************************/
-
 import java.util.*;
 
 /**
- *  The ResizingArrayStack class represents a last-in-first-out (LIFO) stack
- *  of generic items.
- *  It supports the usual push and pop operations, along with methods for peeking
+ *  An implementation of the stack data structure.
+ *  supports the usual push and pop operations, along with methods for peeking
  *  at the top item, testing if the stack is empty, and iterating through the
- *  items in LIFO order.
+ *  items in LIFO (Last In First Out) order.
  *
  *  This implementation uses a resizing array, which doubles the underlying array
  *  when it is full and halves the underlying array when it is one-quarter full.
  *  The push and pop operations take constant amortized time. The size, peek, and
- *  is-empty operations takes constant time in the worst case.
+ *  is-empty operations take constant time in the worst case.
  */
 
 public class Stack<Item> implements Iterable<Item> {
@@ -31,7 +18,8 @@ public class Stack<Item> implements Iterable<Item> {
 
    // Initializes an empty stack.
    public Stack() {
-      // YOUR CODE HERE
+      a = (Item[]) new Object[2];
+      n = 0;
    }
 
    // Is this stack empty?
@@ -48,26 +36,26 @@ public class Stack<Item> implements Iterable<Item> {
 
    // Adds the item to this stack.
    public void push(Item item) {
-      // double size of array if necessary
-      if(n == a.length) resize(2 * a.length);
-      // add item
-      a[n++] = item;
+      if (n == a.length) resize(2*a.length); // double size of array if necessary
+      a[n++] = item;                                 // add item
    }
 
    // Removes and returns the item most recently added to this stack.
    // Throws java.util.NoSuchElementException if this stack is empty.
    public Item pop() {
       if (isEmpty()) throw new NoSuchElementException("Stack underflow");
-      // YOUR CODE HERE
-      return a[n--];  // <- CHANGE THIS return STATEMENT TO A CORRECT ONE
+      Item item = a[n-1];
+      a[n-1] = null;                              // to avoid loitering
+      n--;
+      // shrink size of array if necessary
+      if (n > 0 && n == a.length/4) resize(a.length/2);
+      return item;
    }
-
 
    // Returns (but does not remove) the item most recently added to this stack.
    public Item peek() {
       if (isEmpty()) throw new NoSuchElementException("Stack underflow");
-      // YOUR CODE HERE
-      return null;  // <- CHANGE THIS return STATEMENT TO A CORRECT ONE
+      return a[n-1];
    }
 
    // Returns an iterator to this stack that iterates through the items in LIFO order.
@@ -78,24 +66,18 @@ public class Stack<Item> implements Iterable<Item> {
    // an iterator, doesn't implement remove() since it's optional
    private class ReverseArrayIterator implements Iterator<Item> {
       private int i;
-
       public ReverseArrayIterator() {
-         // YOUR CODE HERE
+         i = n-1;
       }
-
       public boolean hasNext() {
-         // YOUR CODE HERE
-         return false;  // <- CHANGE THIS return STATEMENT TO A CORRECT ONE
+         return i >= 0;
       }
-
       public void remove() {
          throw new UnsupportedOperationException();
       }
-
       public Item next() {
          if (!hasNext()) throw new NoSuchElementException();
-         // YOUR CODE HERE
-         return null;  // <- CHANGE THIS return STATEMENT TO A CORRECT ONE
+         return a[i--];
       }
    }
 
