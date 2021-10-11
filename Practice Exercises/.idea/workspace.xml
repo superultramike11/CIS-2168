@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69ba958d-1d3f-4601-8d8a-6f6cd7d23129" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Oct 3/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Oct 3/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Oct 3/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Oct 3/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Oct 3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Oct 3/Oct 3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Oct 3/someInts.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Oct 3/src/In.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Oct 3/src/Reverse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Oct 3/src/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Oct 3/tobe.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/HalfLife.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/HalfLife.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HalfLife.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HalfLife.java" afterDir="false" />
-    </list>
+    <list default="true" id="69ba958d-1d3f-4601-8d8a-6f6cd7d23129" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +28,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.House">
+    <configuration name="Duck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Duck" />
+      <module name="Practice Exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HalfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HalfLife" />
       <module name="Practice Exercises" />
@@ -51,8 +43,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="House" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="House" />
+      <module name="Practice Exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="Practice Exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Duck" />
+      <item itemvalue="Application.HalfLife" />
+      <item itemvalue="Application.House" />
+      <item itemvalue="Application.Test" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.House" />
+        <item itemvalue="Application.Duck" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.HalfLife" />
       </list>
     </recent_temporary>
