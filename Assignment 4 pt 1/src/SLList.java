@@ -22,25 +22,7 @@ public class SLList<E> {
       }
    }
    
-   public static void main(String[] args) {
-	      Leader<Integer> list;
-	      int n=9;
-	      int m=5;
-	      list = new Leader<>();
-	      
-	      for(int i=1; i<=m; i++) {
-	    	  list.addLast(i);
-	      }
-	      
-	      for(int i=0; i<list.size; i++) {
-	    	  if(list.contains(i) == "7") {
-	    		  
-	    	  }
-	      }
-	      System.out.println(list.size);
-	      System.out.println(list);
-	      
-	   }
+   public static void main(String[] args) {}
    
    private Node getNode(int index) {
 	   Node current = first;
@@ -204,7 +186,5 @@ public class SLList<E> {
       }
       s.append("NULL"); 
       return s.toString();
-   } 
-   
-   public static void main(String[] args) {}
+   }
 }
