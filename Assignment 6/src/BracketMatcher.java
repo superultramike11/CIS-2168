@@ -43,26 +43,30 @@ public class BracketMatcher<Item> {
         return item;
     }
 
-    // procedure isBalanced(string) // are the brackets in string, balanced
+    // procedure isBalanced(string) are the brackets in string, balanced
     public static boolean isBalanced(String text) {
         Stack<Character> stack = new Stack<>();
         for (int i = 1; i <= text.length(); i++) {
             char c = text.charAt(i - 1);
 
             if (c == '(' || c == '[' || c == '{') {
+                System.out.println(stack);
                 stack.push(c);
             }
             else {
                 if (stack.isEmpty()) {
+                    System.out.println(stack);
                     return false;
                 }
                 if ( ( stack.pop() == '[' && c != ']' ) &&
-                        ( stack.pop() == '(' && c != ')' ) )
+                   ( stack.pop() == '(' && c != ')' ) )
                 {
+                    System.out.println(stack);
                     return false;
                 }
             }
         }
+        System.out.println(stack);
         return stack.isEmpty();
     }
 
@@ -70,6 +74,12 @@ public class BracketMatcher<Item> {
         In in = new In("test08.txt"); // axl(rose) IT'S BALANCED
         String text = in.readLine();
         System.out.println("processing: " + text); // comment out or delete this line before submitting
-        System.out.println(isBalanced(text));
+
+        // Function call
+        String expr = "([{}])";
+        if (isBalanced(expr))
+            System.out.println("Balanced ");
+        else
+            System.out.println("Not Balanced ");
     }
 }
