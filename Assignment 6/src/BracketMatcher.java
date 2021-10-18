@@ -6,34 +6,44 @@ public class BracketMatcher<Item> {
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
+            if (c == '(')
+                stack.push(')');
+            else if (c == '{')
+                stack.push('}');
+            else if (c == '[')
+                stack.push(']');
+            else if (stack.isEmpty() || stack.pop() != c)
+                return false;
+        }
+        /*
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
             //System.out.println(c);
             if (c == '(' || c == '[' || c == '{') {
                 stack.push(c);
-                //System.out.println("Pushed: " + stack);
             }
             else {
                 if (stack.isEmpty()) {
-                    //System.out.println("Empty: " + stack);
                     return false;
                 }
                 if ((stack.pop() == '[' && c != ']') &&
                     (stack.pop() == '(' && c != ')') &&
                     (stack.pop() == '{' && c != '}')) {
-                    //System.out.println("Long if: " + stack);
                     return false;
                 }
             }
         }
+         */
         return stack.isEmpty();
     }
 
     public static void main(String[] args) {
-        In in = new In("test03.txt");
+        In in = new In("test08.txt");
         String text = in.readLine();
 
-        if (isBalanced("[())[]"))
-            System.out.println("Balanced ");
+        if (isBalanced(text))
+            System.out.println("Balanced");
         else
-            System.out.println("Not Balanced ");
+            System.out.println("Not Balanced");
     }
 }
