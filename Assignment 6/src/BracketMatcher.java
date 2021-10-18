@@ -9,22 +9,17 @@ public class BracketMatcher<Item> {
             //System.out.println(c);
             if (c == '(' || c == '[' || c == '{') {
                 stack.push(c);
-                System.out.println("Pushed: " + stack);
+                //System.out.println("Pushed: " + stack);
             }
             else {
-                /*
-                if (c != '(' || c != '[' || c != '{') {
-                    i++;
-                }
-                 */
                 if (stack.isEmpty()) {
-                    System.out.println("Empty: " + stack);
+                    //System.out.println("Empty: " + stack);
                     return false;
                 }
                 if ((stack.pop() == '[' && c != ']') &&
                     (stack.pop() == '(' && c != ')') &&
                     (stack.pop() == '{' && c != '}')) {
-                    System.out.println("Long if: " + stack);
+                    //System.out.println("Long if: " + stack);
                     return false;
                 }
             }
@@ -36,7 +31,7 @@ public class BracketMatcher<Item> {
         In in = new In("test03.txt");
         String text = in.readLine();
 
-        if (isBalanced(text))
+        if (isBalanced("[())[]"))
             System.out.println("Balanced ");
         else
             System.out.println("Not Balanced ");
