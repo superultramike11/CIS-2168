@@ -6,6 +6,7 @@ public class BracketMatcher<Item> {
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
+            System.out.println(c);
             if (c == '(')
                 stack.push(')');
             else if (c == '{')
@@ -15,35 +16,14 @@ public class BracketMatcher<Item> {
             else if (stack.isEmpty() || stack.pop() != c)
                 return false;
         }
-        /*
-        for (int i = 0; i < text.length(); i++) {
-            char c = text.charAt(i);
-            //System.out.println(c);
-            if (c == '(' || c == '[' || c == '{') {
-                stack.push(c);
-            }
-            else {
-                if (stack.isEmpty()) {
-                    return false;
-                }
-                if ((stack.pop() == '[' && c != ']') &&
-                    (stack.pop() == '(' && c != ')') &&
-                    (stack.pop() == '{' && c != '}')) {
-                    return false;
-                }
-            }
-        }
-         */
         return stack.isEmpty();
     }
 
     public static void main(String[] args) {
-        In in = new In("test08.txt");
+        In in = new In("test05.txt");
         String text = in.readLine();
 
-        if (isBalanced(text))
-            System.out.println("Balanced");
-        else
-            System.out.println("Not Balanced");
+        if (isBalanced(text)) System.out.println("Balanced");
+        else System.out.println("Not Balanced");
     }
 }
