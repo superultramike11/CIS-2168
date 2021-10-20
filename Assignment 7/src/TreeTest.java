@@ -14,5 +14,22 @@ public class TreeTest {
         tree.inorderTraversal();
         System.out.printf("%n%nPostorder traversal%n");
         tree.postorderTraversal();
+
+        System.out.println("");
+
+        System.out.println("Level Order");
+
+        tree.levelorderTraversal();
+
+        /* TESTING THE GETDEPTH METHOD */
+        /*
+        Tree<Integer> tree = new Tree<>();
+        Integer[] keys = {2,1,6,8};
+        for (Integer key : keys) {
+            System.out.printf("%d ", key);
+            tree.add(key);
+        }
+        System.out.println(tree.getDepth());
+        */
     }
 }
