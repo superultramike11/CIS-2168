@@ -10,15 +10,14 @@ public class TreeTest {
         }
         System.out.printf("%n%nPreorder traversal%n");
         tree.preorderTraversal();
+
         System.out.printf("%n%nInorder traversal%n");
         tree.inorderTraversal();
+
         System.out.printf("%n%nPostorder traversal%n");
         tree.postorderTraversal();
 
-        System.out.println("");
-
-        System.out.println("Level Order");
-
+        System.out.printf("%n%nLevel Order%n");
         tree.levelorderTraversal();
 
         /* TESTING THE GETDEPTH METHOD */

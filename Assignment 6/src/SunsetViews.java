@@ -13,7 +13,7 @@ public class SunsetViews {
                     maxHeight = height;
                 }
             }
-            Collections.reverse(sunfacing); // takes O(n) time do I need to remove this?
+            Collections.reverse(sunfacing);
         }
         if (direction.equals("WEST")) {
             int maxHeight = 0;

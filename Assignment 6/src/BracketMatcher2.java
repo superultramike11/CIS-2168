@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class BracketMatcher<Item> {
+public class BracketMatcher2<Item> {
     // procedure isBalanced(string) are the brackets in string, balanced
     public static int isBalanced(String text) {
         Stack<Character> stack = new Stack<Character>();
