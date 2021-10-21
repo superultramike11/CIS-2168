@@ -73,9 +73,7 @@ public class Tree<Key extends Comparable> {
                 System.out.printf( "%s ", node.data ); // output node data
         }
 
-        public int getDepth() {
-                return getDepthHelper( root );
-        }
+        public int getDepth() { return getDepthHelper( root ); }
 
         private int getDepthHelper( Node node ) {
                 if ( node == null ) return 0;
@@ -84,23 +82,14 @@ public class Tree<Key extends Comparable> {
                 return (Math.max(leftDepth, rightDepth) + 1);
         }
 
-        public void levelorderTraversal(){
+        public void levelorderTraversal() {
                 Queue<Node> q = new LinkedList<>();
-                // Insert the key into the queue
                 q.add(root);
-                // While there are nodes left in the queue
                 while(!q.isEmpty()) {
-                        // Get the next node in the queue
                         Node node = q.remove();
-                        // print the node's value
-                        System.out.println(node.data);
-
-                        // If the reference to the left child of the node is not null
-                                // insert the left child node in the queue
-                                q.add(node.left);
-                        // If the reference to the right child of the node is not null
-                                // insert the right child node in the queue
-                                q.add(node.right);
+                        System.out.printf( "%s ", node.data);
+                        q.add(node.left);
+                        q.add(node.right);
                 }
         }
 }
