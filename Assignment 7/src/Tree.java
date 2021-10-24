@@ -3,30 +3,7 @@ import java.util.Queue;
 
 public class Tree<Key extends Comparable> {
         private Node root;
-        private static class Node<Key extends Comparable<Key>> {
-                Key data; // this node's data
-                Node<Key> left, right; // this node's children
 
-                // Constructor: initializes data and makes this a leaf node
-                public Node(Key key) {
-                        data = key;
-                        left = right = null;
-                }
-
-                // find insertion point and insert new node, ignoring duplicate keys
-                public void insert(Key key) {
-                        if (key.compareTo(data) < 0) { // insert in the left subtree
-                                if (left == null) left = new Node(key);
-                                else left.insert(key); // continue traversing left subtree recursively
-                        }
-                        else if (key.compareTo(data) > 0) { // insert in the right subtree
-                                if (right == null) right = new Node(key);
-                                else right.insert(key); // continue traversing right subtree recursively
-                        }
-                }
-
-
-        }
         // Constructor: initializes an empty Binary Search Tree
         public Tree() { root = null; }
 
@@ -86,10 +63,12 @@ public class Tree<Key extends Comparable> {
                 Queue<Node> q = new LinkedList<>();
                 q.add(root);
                 while(!q.isEmpty()) {
-                        Node node = q.remove();
-                        System.out.printf( "%s ", node.data);
-                        q.add(node.left);
-                        q.add(node.right);
+                        Node x = q.remove();
+                        if(x!=null) {
+                                System.out.printf("%s ", x.data);
+                                q.add(x.left);
+                                q.add(x.right);
+                        }
                 }
         }
 }
@@ -99,5 +78,4 @@ public class Tree<Key extends Comparable> {
 //      postorder: 11 19 18 32 44 40 28 69 72 71 92 99 97 83 49
 
 
-// 2: When you change the keys the pre/postorder will change but the inorder won't change
-//      Because inorder sorts all the elements/keys together
+// 2: When you change the keys the pre/postorder will change but the inorder won't change because inorder sorts all the elements/keys together
