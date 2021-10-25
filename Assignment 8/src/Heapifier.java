@@ -2,6 +2,12 @@
 EXERCISE 10.1
     PLAYGROUND arranged as a max-heap would be
     [Y, U, R, P, G, A, O, L, N, D]
+      i  0 1 2 3 4 5 6 7 8 9 10
+    a[i] - Y U R P G A O L N D
+           Y
+             U R
+                 P G A O
+                         L N D
 
 EXERCISE 10.2(a)
     a: [U, T, S, I, O, M, N, C, E, D]
