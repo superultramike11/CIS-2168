@@ -62,10 +62,12 @@ public class Tree<Key extends Comparable> {
                 Queue<Node> q = new LinkedList<>();
                 q.add(root);
                 while(!q.isEmpty()) {
-                        Node node = q.remove();
-                        System.out.printf( "%s ", node.data);
-                        q.add(node.left);
-                        q.add(node.right);
+                        Node x = q.remove();
+                        if(x!=null) {
+                                System.out.printf("%s ", x.data);
+                                q.add(x.left);
+                                q.add(x.right);
+                        }
                 }
         }
 }
@@ -75,5 +77,4 @@ public class Tree<Key extends Comparable> {
 //      postorder: 11 19 18 32 44 40 28 69 72 71 92 99 97 83 49
 
 
-// 2: When you change the keys the pre/postorder will change but the inorder won't change
-//      Because inorder sorts all the elements/keys together
+// 2: When you change the keys the pre/postorder will change but the inorder won't change because inorder sorts all the elements/keys together

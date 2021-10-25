@@ -28,18 +28,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment 7 pt 2/src/InvertBT.java" />
   </component>
-  <component name="RunManager" selected="Application.Node">
+  <component name="RunManager" selected="Application.Tree">
     <configuration name="Duck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Duck" />
-      <module name="Practice Exercises" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HalfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HalfLife" />
       <module name="Practice Exercises" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -66,20 +59,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Tree" />
+      <module name="Practice Exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Duck" />
-      <item itemvalue="Application.HalfLife" />
       <item itemvalue="Application.House" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Application.Node" />
+      <item itemvalue="Application.Tree" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Tree" />
         <item itemvalue="Application.Node" />
         <item itemvalue="Application.House" />
         <item itemvalue="Application.Duck" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.HalfLife" />
       </list>
     </recent_temporary>
   </component>
