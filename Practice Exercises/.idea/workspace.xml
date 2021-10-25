@@ -28,7 +28,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment 7 pt 2/src/InvertBT.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment 7 pt 2" />
   </component>
   <component name="RunManager" selected="Application.Tree">
     <configuration name="Duck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -69,8 +69,8 @@
     <list>
       <item itemvalue="Application.Duck" />
       <item itemvalue="Application.House" />
-      <item itemvalue="Application.Test" />
       <item itemvalue="Application.Node" />
+      <item itemvalue="Application.Test" />
       <item itemvalue="Application.Tree" />
     </list>
     <recent_temporary>

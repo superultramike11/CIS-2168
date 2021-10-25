@@ -13,27 +13,20 @@ public class TreeHeightCalculator {
         parent = new int[n];
         for (int i = 0; i < n; i++) {
             parent[i] = scanner.nextInt();
-            System.out.println("read these parents: " + Arrays.toString(parent));
+            //System.out.println("read these parents: " + Arrays.toString(parent));
         }
-    }
-
-    // Maybe this will help?
-    public int getDepth() { return getDepthHelper( root ); }
-
-    private int getDepthHelper( Node node ) {
-        if ( node == null ) return 0;
-        int leftDepth = getDepthHelper(node.left);
-        int rightDepth = getDepthHelper(node.right);
-        return (Math.max(leftDepth, rightDepth) + 1);
     }
 
     // Computes the height of the tree represented by the parent[] array
     int computeHeight() {
         int maxHeight = 0;
-        for (int i=0; i<parent.length; i++) {
-            if(parent[i] == -1) {
-                System.out.println("The root is " + i);
+        int j = 0;
+        // Pick all elements one by one
+        for (int i = 0; i < n; i++) {
+            for (j = 0; j < i; j++) {
+                if (parent[i] == parent[j]) break;
             }
+            if (i == j) maxHeight++;
         }
         return maxHeight;
     }
@@ -41,7 +34,15 @@ public class TreeHeightCalculator {
     // Test Cases
     public static void main(String[] args) throws FileNotFoundException {
         // Test case 1 (sample run 1 of instructions)
-        TreeHeightCalculator calculator = new TreeHeightCalculator("tree1.txt");
-        System.out.println("The height of this tree is: " + calculator.computeHeight()); // should print 4
+        TreeHeightCalculator calculator1 = new TreeHeightCalculator("tree1.txt");
+        System.out.println("The height of this tree is: " + calculator1.computeHeight()); // should print 4
+
+        // Test case 2 (sample run 1 of instructions)
+        TreeHeightCalculator calculator2 = new TreeHeightCalculator("tree2.txt");
+        System.out.println("The height of this tree is: " + calculator2.computeHeight()); // should print 6
+
+        // Test case 1 (sample run 1 of instructions)
+        TreeHeightCalculator calculator3 = new TreeHeightCalculator("tree3.txt");
+        System.out.println("The height of this tree is: " + calculator3.computeHeight()); // should print 5
     }
 }
