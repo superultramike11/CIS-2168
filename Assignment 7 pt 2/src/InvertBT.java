@@ -1,6 +1,6 @@
 import java.util.*;
 public class InvertBT {
-    private Node root;
+    public Node root;
     private static class Node<Key extends Comparable<Key>> {
         Key data; // this node's data
         Node<Key> left, right; // this node's children
@@ -16,6 +16,7 @@ public class InvertBT {
 
     public Node invertBT(Node root) {
         if (root==null) return root;
+
         Node left = invertBT(root.left);
         Node right = invertBT(root.right);
 
