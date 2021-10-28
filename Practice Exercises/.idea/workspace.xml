@@ -30,7 +30,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment 7 pt 2" />
   </component>
-  <component name="RunManager" selected="Application.Tree">
+  <component name="RunManager" selected="Application.RotatingCube">
     <configuration name="Duck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Duck" />
       <module name="Practice Exercises" />
@@ -52,8 +52,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
+    <configuration name="RotatingCube" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RotatingCube" />
       <module name="Practice Exercises" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -70,16 +70,16 @@
       <item itemvalue="Application.Duck" />
       <item itemvalue="Application.House" />
       <item itemvalue="Application.Node" />
-      <item itemvalue="Application.Test" />
       <item itemvalue="Application.Tree" />
+      <item itemvalue="Application.RotatingCube" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RotatingCube" />
         <item itemvalue="Application.Tree" />
         <item itemvalue="Application.Node" />
         <item itemvalue="Application.House" />
         <item itemvalue="Application.Duck" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>

@@ -17,17 +17,33 @@ public class TreeHeightCalculator {
         }
     }
 
+    void fill(int i, int MaxHeightArray[]) {
+        if(parent[i] == -1) {
+            MaxHeightArray[i] = 1;
+            return;
+        }
+        if(MaxHeightArray[parent[i]] == 0) fill(parent[i], MaxHeightArray);
+        MaxHeightArray[i] = MaxHeightArray[parent[i]] + 1;
+    }
+
     // Computes the height of the tree represented by the parent[] array
     int computeHeight() {
-        int maxHeight = 0;
-        int j = 0;
-        // Pick all elements one by one
-        for (int i = 0; i < n; i++) {
-            for (j = 0; j < i; j++) {
-                if (parent[i] == parent[j]) break;
-            }
-            if (i == j) maxHeight++;
-        }
+        int MaxDepthArray[] = new int[n];
+
+        // initalize a new array
+        for(int i=0; i<n; i++)
+            MaxDepthArray[i] = 0;
+
+        // fill the array based on the elements given in the file
+        for(int i=0; i<n; i++)
+            fill(i, MaxDepthArray);
+
+        // equate the maxdepth to the first element
+        int maxHeight = MaxDepthArray[0];
+
+        // keep comparing the maxHeight to other elements until you reach the max
+        for(int i=1; i<n; i++)
+            if(maxHeight < MaxDepthArray[i]) maxHeight = MaxDepthArray[i];
         return maxHeight;
     }
 
