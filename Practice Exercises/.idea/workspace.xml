@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69ba958d-1d3f-4601-8d8a-6f6cd7d23129" name="Changes" comment="" />
+    <list default="true" id="69ba958d-1d3f-4601-8d8a-6f6cd7d23129" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/MaxPQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/RotatingCube.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/RotatingCube.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,18 +33,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment 7 pt 2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.RotatingCube">
-    <configuration name="Duck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Duck" />
+  <component name="RunManager" selected="Application.MaxPQ">
+    <configuration name="House" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="House" />
       <module name="Practice Exercises" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="House" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="House" />
+    <configuration name="MaxPQ" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MaxPQ" />
       <module name="Practice Exercises" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -67,19 +72,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Duck" />
       <item itemvalue="Application.House" />
       <item itemvalue="Application.Node" />
       <item itemvalue="Application.Tree" />
       <item itemvalue="Application.RotatingCube" />
+      <item itemvalue="Application.MaxPQ" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MaxPQ" />
         <item itemvalue="Application.RotatingCube" />
         <item itemvalue="Application.Tree" />
         <item itemvalue="Application.Node" />
         <item itemvalue="Application.House" />
-        <item itemvalue="Application.Duck" />
       </list>
     </recent_temporary>
   </component>
