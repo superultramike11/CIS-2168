@@ -51,8 +51,9 @@ public class TreeHeightCalculator {
     public static void main(String[] args) throws FileNotFoundException {
         // Test case 1 (sample run 1 of instructions)
         TreeHeightCalculator calculator1 = new TreeHeightCalculator("tree1.txt");
-        System.out.println("The height of this tree is: " + calculator1.computeHeight()); // should print 4
+        System.out.println("The height of this tree is: " + calculator1.computeHeight()); // should print 3
 
+        /*
         // Test case 2 (sample run 1 of instructions)
         TreeHeightCalculator calculator2 = new TreeHeightCalculator("tree2.txt");
         System.out.println("The height of this tree is: " + calculator2.computeHeight()); // should print 6
@@ -60,5 +61,6 @@ public class TreeHeightCalculator {
         // Test case 1 (sample run 1 of instructions)
         TreeHeightCalculator calculator3 = new TreeHeightCalculator("tree3.txt");
         System.out.println("The height of this tree is: " + calculator3.computeHeight()); // should print 5
+         */
     }
 }
