@@ -33,6 +33,15 @@ public class Heapifier {
         int n = a.length;
         for(int k=n/2; k >= 1; k--)
             sink(a, k, n);
+
+        // sortdown phase (when commented out, it produces a max-heap for input)
+        /*
+        int k = n;
+        while (k > 1) {
+            exch(a, 1, k--);
+            sink(a, 1, k);
+        }
+        */
     }
 
     // restores the heap invariant for the subtree rooted at index k
@@ -65,8 +74,8 @@ public class Heapifier {
         System.out.println(Arrays.toString(playground)); // prints [Y,U,R,P,G,A,O,L,N,D]
 
         Character[] miscounted = {'M', 'I', 'S', 'C', 'O', 'U', 'N', 'T', 'E', 'D'};
-        System.out.println(Arrays.toString(miscounted));
+        System.out.println(Arrays.toString(miscounted)); // prints [M,I,S,C,O,U,N,T,E,D]
         Heapifier.heapify(miscounted);
-        System.out.println(Arrays.toString(miscounted));
+        System.out.println(Arrays.toString(miscounted)); // prints [U,T,S,I,O,M,N,C,E,D]
     }
 }
