@@ -165,9 +165,9 @@ public class MinPQ<Key> implements Iterable<Key> {
       System.out.println("\tby placing each character in a min-priority queue and ");
       System.out.println("\tby removing the smallest character when I see a '-':");
       for (Character character : input) {
-         if (!character.equals('-'))  pq.insert(character);
-         else if (!pq.isEmpty()) System.out.println(pq.delMin() + " ");
+         if (!character.equals('-'))  pq.insert(character); // if we see a letter we put in the PQ
+         else if (!pq.isEmpty()) System.out.println(pq.delMin() + " "); // and if there are elements in the PQ we print out the minimum element we "deleted"
       }
-      System.out.println("(" + pq.size() + " left on pq)");
+      System.out.println("(" + pq.size() + " left on pq)"); // how many elements are in the PQ after we have collected the minimum character in each section
    }
 }
