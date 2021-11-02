@@ -22,7 +22,7 @@ public class TopMints {
          // YOUR CODE HERE (1 or 2 lines should do the job)
          // remove minimum if m+1 entries on the PQ
          if (pq.size() == m+1) {
-            pq.delMin(); // we want to keep removing the mini numbers so we are only left with the 'm' highest numbers
+            pq.delMin(); // we want to keep removing the minimum #'s so we are only left with the 'm' highest numbers
          }
       }
       double time1 = timer1.elapsedTime();
@@ -72,3 +72,43 @@ public class TopMints {
       System.out.println("-------------------------------------------------------------------");
    }
 }
+/*
+sink and swim both take O(logn)
+Creating a heap takes constant time O(n)
+Extracting an element (sink) is O(logn)
+Q1: What is the output with 1 million test
+Ans: Test 1
+------
+			Top 5 integers are
+999986
+999988
+999990
+999995
+999996
+
+It took 2.75 seconds to process 1,000,000 integers using a priority queue.
+
+Test 2
+------
+			Top 5 integers are
+999986
+999988
+999990
+999995
+999996
+
+It took 3.12 seconds to process 1,000,000 integers by sorting them.
+-------------------------------------------------------------------
+
+Q2: How long did it take for Test 1 to complete on your computer?
+Ans: It took 2.75 seconds to process 1,000,000 integers using a priority queue.
+
+Q3: What is the Big-O running time of Test 1?
+Ans: O(mlogn)
+
+Q4: How long did it take for Test 2 to complete on your computer?
+Ans: It took 3.12 seconds to process 1,000,000 integers by sorting them.
+
+Q5: What is the Big-O running time of Test 2?
+Ans: Array.sort() uses TimSort which is a O(nlogn)
+*/

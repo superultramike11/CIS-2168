@@ -1,7 +1,7 @@
 // Starter file for Assignment 8 (CIS 2168, Fall 21).
 
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 public class Scheduler {
     private int n;              // number of workers (threads)
@@ -26,19 +26,30 @@ public class Scheduler {
     // Assign jobs to workers (threads).
     // (assignedWorker[i] gets job i; startTime[i] is when the i-th job starts)
     private void assign() {
-        // TODO: DELETE THIS METHOD BODY (LINES 33 - 46) AND REPLACE IT WITH YOUR FASTER CODE
         assignedWorker = new int[jobDurations.length];
         startTime = new long[jobDurations.length];
         long[] readyTime = new long[n];
-        for (int i = 0; i < jobDurations.length; i++) {
-            int duration = jobDurations[i];
-            int nextWorker = 0;
-            for (int j = 0; j < n; ++j)
-                if (readyTime[j] < readyTime[nextWorker])
-                    nextWorker = j;
-            assignedWorker[i] = nextWorker;
-            startTime[i] = readyTime[nextWorker];
-            readyTime[nextWorker] += duration;
+        PriorityQueue<Worker> pq = new PriorityQueue<>(n);
+
+        // for loop to build/insert the threads
+        for(int i =0; i<n; i++) {
+            pq.offer(new Worker(i, jobDurations[i]));
+            assignedWorker[i] = i;
+            startTime[i] = 0;
+            readyTime[i] = jobDurations[i];
+        }
+
+        // for loop from m to n to compare times
+        for(int j=n; j<jobDurations.length; j++) {
+            assignedWorker[j] = pq.peek().index;
+            startTime[j] = pq.peek().readyTime;
+            System.out.println("Ready time: " + pq.peek().readyTime);
+            readyTime[pq.peek().index] = startTime[j] + jobDurations[j];
+            System.out.println("Before:" + pq.peek().index);
+            pq.poll();
+            System.out.println("After: " + pq.peek().index);
+            pq.add(new Worker(assignedWorker[j], readyTime[pq.peek().index]));
+            System.out.println();
         }
     }
 
@@ -48,7 +59,7 @@ public class Scheduler {
 
         assert scheduler.startTime.length == scheduler.assignedWorker.length;
         for (int i = 0; i < scheduler.startTime.length; i++)
-            System.out.println(scheduler.assignedWorker[i] + " " + scheduler.startTime[i]);
+            System.out.println("Assigned Worker: " + scheduler.assignedWorker[i] + " " + "Start Time: " + scheduler.startTime[i]);
     }
 
     /****** Code below this line is not used in the above solution ******/
