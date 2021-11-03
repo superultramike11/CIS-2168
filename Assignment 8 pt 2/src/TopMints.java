@@ -104,7 +104,7 @@ Q2: How long did it take for Test 1 to complete on your computer?
 Ans: It took 2.75 seconds to process 1,000,000 integers using a priority queue.
 
 Q3: What is the Big-O running time of Test 1?
-Ans: O(mlogn)
+Ans: O(nlogn)
 
 Q4: How long did it take for Test 2 to complete on your computer?
 Ans: It took 3.12 seconds to process 1,000,000 integers by sorting them.
