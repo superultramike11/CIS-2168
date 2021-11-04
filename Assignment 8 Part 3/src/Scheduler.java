@@ -29,27 +29,20 @@ public class Scheduler {
         assignedWorker = new int[jobDurations.length];
         startTime = new long[jobDurations.length];
         long[] readyTime = new long[n];
-        PriorityQueue<Worker> pq = new PriorityQueue<>(n);
+        PriorityQueue<Worker> pq = new PriorityQueue<>();
 
-        // for loop to build/insert the threads
-        for(int i =0; i<n; i++) {
-            pq.offer(new Worker(i, jobDurations[i]));
-            assignedWorker[i] = i;
-            startTime[i] = 0;
-            readyTime[i] = jobDurations[i];
+        // Create a PQ of workers
+        for(int i=0; i<n; i++) {
+            pq.offer(new Worker(i, 0));
         }
 
-        // for loop from m to n to compare times
-        for(int j=n; j<jobDurations.length; j++) {
-            assignedWorker[j] = pq.peek().index;
-            startTime[j] = pq.peek().readyTime;
-            System.out.println("Ready time: " + pq.peek().readyTime);
-            readyTime[pq.peek().index] = startTime[j] + jobDurations[j];
-            System.out.println("Before:" + pq.peek().index);
-            pq.poll();
-            System.out.println("After: " + pq.peek().index);
-            pq.add(new Worker(assignedWorker[j], readyTime[pq.peek().index]));
-            System.out.println();
+        // For each job, extract the worker, update the worker[i]'s info, and offer it back to the PQ
+        for(int i=0; i<jobDurations.length; i++) {
+            Worker worker = pq.poll();
+            long duration = jobDurations[i];
+            assignedWorker[i] = worker.index;
+            startTime[i] = worker.readyTime;
+            pq.offer(new Worker(assignedWorker[i], worker.readyTime + duration));
         }
     }
 
