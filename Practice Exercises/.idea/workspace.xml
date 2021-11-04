@@ -28,11 +28,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
   </component>
-  <component name="RunManager" selected="Application.MaxPQ">
-    <configuration name="House" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="House" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\micha\Desktop\Coding\Java\Practice Exercises\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\micha\Desktop\Coding\Java\Practice Exercises" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Lottery">
+    <configuration name="Lottery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lottery" />
       <module name="Practice Exercises" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -45,13 +53,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Node" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Node" />
-      <module name="Practice Exercises" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RotatingCube" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RotatingCube" />
       <module name="Practice Exercises" />
@@ -59,27 +60,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Tree" />
+    <configuration name="UnqiueWords" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UnqiueWords" />
+      <module name="Practice Exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hasDuplicates" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hasDuplicates" />
       <module name="Practice Exercises" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.House" />
-      <item itemvalue="Application.Node" />
-      <item itemvalue="Application.Tree" />
       <item itemvalue="Application.RotatingCube" />
       <item itemvalue="Application.MaxPQ" />
+      <item itemvalue="Application.UnqiueWords" />
+      <item itemvalue="Application.hasDuplicates" />
+      <item itemvalue="Application.Lottery" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Lottery" />
+        <item itemvalue="Application.hasDuplicates" />
+        <item itemvalue="Application.UnqiueWords" />
         <item itemvalue="Application.MaxPQ" />
         <item itemvalue="Application.RotatingCube" />
-        <item itemvalue="Application.Tree" />
-        <item itemvalue="Application.Node" />
-        <item itemvalue="Application.House" />
       </list>
     </recent_temporary>
   </component>
