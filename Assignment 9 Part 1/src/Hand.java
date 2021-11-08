@@ -4,15 +4,15 @@ public class Hand {
    /*************************** Public static field ***************************/
    // the name of this hand
    public static Map<Integer, String> nameMap = Map.of(
-         8, "straight flush",
-         7, "four of a kind",
-         6, "full house",
-         5, "flush",
-         4, "straight",
-         3, "three of a kind",
-         2, "two pair",
-         1, "pair",
-         0, "nothing");
+           8, "straight flush",
+           7, "four of a kind",
+           6, "full house",
+           5, "flush",
+           4, "straight",
+           3, "three of a kind",
+           2, "two pair",
+           1, "pair",
+           0, "nothing");
 
    /****************************** Private fields ******************************/
    // A list of cards in this hand. E.g., [8C, TS, KC, 9H, 4S] is a list of cards.
@@ -49,7 +49,17 @@ public class Hand {
    // How many times does each rank repeat in this hand? Maps each rank to the number
    // of times it occurs in this hand and returns the map. E.g., "KD KS 9H JC 9S" has
    // two Ks, two 9s, and one J, so its map is {13=2, 11=1, 9=2}.
-   private void buildRankFrequencyMap() { /* YOUR CODE HERE - IMPLEMENT THIS METHOD */ }
+   private void buildRankFrequencyMap() {
+      /* YOUR CODE HERE - IMPLEMENT THIS METHOD */
+      for(Integer key : cardRanks) {
+         int prev = 0;
+         if(rankFrequency.get(key) != null) {
+            prev = rankFrequency.get(key);
+         }
+         rankFrequency.put(key, prev+1);
+      }
+      System.out.println(rankFrequency);
+   }
 
    // generate a list of ranks in decreasing order (the highest rank first, the lowest last).
    private void buildRankArray() {
@@ -104,7 +114,7 @@ public class Hand {
    public int getHandValue() { return handValue; }
 
    /*********************************************************************************
-                        Methods that check for the hand categories
+    Methods that check for the hand categories
     ********************************************************************************/
    // Is this hand a straight flush?
    public boolean isStraightFlush() { return isFlush() && isStraight(); }
