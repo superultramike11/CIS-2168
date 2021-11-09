@@ -50,15 +50,20 @@ public class Hand {
    // of times it occurs in this hand and returns the map. E.g., "KD KS 9H JC 9S" has
    // two Ks, two 9s, and one J, so its map is {13=2, 11=1, 9=2}.
    private void buildRankFrequencyMap() {
-      /* YOUR CODE HERE - IMPLEMENT THIS METHOD */
-      for(Integer key : cardRanks) {
-         int prev = 0;
-         if(rankFrequency.get(key) != null) {
-            prev = rankFrequency.get(key);
+      Integer rank;
+      for(Card card : hand) {
+         rank = card.getRank();
+         // if we have seen this rank before then we just increment
+         if(rankFrequency.containsKey(rank)) {
+            int count = rankFrequency.get(rank);
+            rankFrequency.put(rank, count + 1);
          }
-         rankFrequency.put(key, prev+1);
+         // if we haven't then we add it to the map
+         else {
+            rankFrequency.put(rank, 1);
+         }
       }
-      System.out.println(rankFrequency);
+      //System.out.println("rankfrequncy size is: " + rankFrequency.size());
    }
 
    // generate a list of ranks in decreasing order (the highest rank first, the lowest last).
@@ -121,43 +126,90 @@ public class Hand {
 
    // Is this hand four of a kind?
    public boolean isFourOfaKind() {
-      /* YOUR CODE HERE - IMPLEMENT THIS METHOD */
+      Integer rank;
+      for(Card card : hand) {
+         rank = card.getRank();
+         if(rankFrequency.get(rank) == 4) {
+            return true;
+         }
+      }
       return false; // delete this line and substitute it with your code
    }
 
    // Is this hand a full house (3 cards of the same rank & 2 cards of the same rank)?
    public boolean isFullHouse() {
-      /* YOUR CODE HERE - IMPLEMENT THIS METHOD */
+      if(rankFrequency.size() == 2) return true;
       return false; // delete this line and substitute it with your code
    }
 
    // Is this hand a flush? (Can also be a straight.)
    public boolean isFlush() {
-      /* YOUR CODE HERE - IMPLEMENT THIS METHOD */
-      return false; // delete this line and substitute it with your code
+      ArrayList<Card> hand = getHand();
+      Card card1 = hand.get(0);
+      char suit = card1.getSuit();
+      int suitCounter = 0;
+      for(Card card : hand) {
+         if(card.getSuit() == suit) {
+            suitCounter++;
+         }
+         if(suitCounter==5) {
+            return true;
+         }
+      }
+      return false;
    }
 
    // Is this hand a straight? (Can also be a flush.)
    public boolean isStraight() {
-      /* YOUR CODE HERE - IMPLEMENT THIS METHOD */
-      return false; // delete this line and substitute it with your code
+      Integer[] x = getCardRanks();
+      for(int i=1; i<x.length-1; i++) {
+         if(x[i] == x[i-1] - 1) {
+            continue;
+         }
+         else {
+            return false;
+         }
+      }
+      return true;
    }
 
    // Is this hand three of a kind (also called a set or trips in poker)?
    public boolean isThreeOfaKind() {
-      /* YOUR CODE HERE - IMPLEMENT THIS METHOD */
+      Integer rank;
+      for(Card card : hand) {
+         rank = card.getRank();
+         if(rankFrequency.get(rank) == 4 && !isFullHouse()) {
+            return true;
+         }
+      }
       return false; // delete this line and substitute it with your code
    }
 
    // Does this hand contain exactly two pairs?
    public boolean isTwoPair() {
-      /* YOUR CODE HERE - IMPLEMENT THIS METHOD */
+      Integer rank;
+      int pairCounter = 0;
+      for(Card card : hand) {
+         rank = card.getRank();
+         if(rankFrequency.get(rank) == 2) {
+            pairCounter++;
+         }
+      }
+      if(pairCounter==4) {
+         return true;
+      }
       return false; // delete this line and substitute it with your code
    }
 
    // Does this hand contain exactly one pair?
    public boolean isPair() {
-      /* YOUR CODE HERE - IMPLEMENT THIS METHOD */
+      Integer rank;
+      for(Card card : hand) {
+         rank = card.getRank();
+         if(rankFrequency.get(rank) == 2 && !isTwoPair() &&!isFullHouse()) {
+            return true;
+         }
+      }
       return false; // delete this line and substitute it with your code
    }
 

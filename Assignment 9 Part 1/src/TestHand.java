@@ -11,7 +11,6 @@ public class TestHand {
       System.out.println(hand.getRankFrequency()); // format: {4=1, 8=1, 9=1, 10=1, 13=1}
       System.out.println("-------------------------");
 
-      /*
       // TEST 1: Full house
       System.out.println("\tFull House:");
       hand = new Hand("7D 7S 5D 7C 5H"); // hand rank = 6
@@ -34,9 +33,9 @@ public class TestHand {
       System.out.println(", hand rank = " + hand.getHandValue());  // 5
       System.out.println("Is this a flush? " + hand.isFlush()); // true
       System.out.println(new Hand("AS AD AH AC TS").isFlush()); // false
-      System.out.println(new Hand("" +
-            "").isFlush()); // true
+      System.out.println(new Hand("AS 2S 3S 5S 4S").isFlush()); // true
       System.out.println("-------------------------");
+
 
       // TEST 3: isStraightFlush() - returns true if it is both straight and a flush
       System.out.println("\tStraight Flush:");
@@ -138,6 +137,5 @@ public class TestHand {
       a = new Hand("5D 4S 3D 2C AH").getCardRanks();
       System.out.println(Arrays.toString(a)); // [5, 4, 3, 2, 1]
       System.out.println("-----------------");
-       */
    }
 }
