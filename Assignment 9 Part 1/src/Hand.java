@@ -63,7 +63,6 @@ public class Hand {
             rankFrequency.put(rank, 1);
          }
       }
-      //System.out.println("rankfrequncy size is: " + rankFrequency.size());
    }
 
    // generate a list of ranks in decreasing order (the highest rank first, the lowest last).
@@ -138,13 +137,11 @@ public class Hand {
 
    // Is this hand a full house (3 cards of the same rank & 2 cards of the same rank)?
    public boolean isFullHouse() {
-      if(rankFrequency.size() == 2) return true;
-      return false; // delete this line and substitute it with your code
+      return rankFrequency.size() == 2;
    }
 
    // Is this hand a flush? (Can also be a straight.)
    public boolean isFlush() {
-      ArrayList<Card> hand = getHand();
       Card card1 = hand.get(0);
       char suit = card1.getSuit();
       int suitCounter = 0;
@@ -161,12 +158,8 @@ public class Hand {
 
    // Is this hand a straight? (Can also be a flush.)
    public boolean isStraight() {
-      Integer[] x = getCardRanks();
-      for(int i=1; i<x.length-1; i++) {
-         if(x[i] == x[i-1] - 1) {
-            continue;
-         }
-         else {
+      for(int i=1; i<getCardRanks().length-1; i++) {
+         if(getCardRanks()[i] != getCardRanks()[i-1] - 1) {
             return false;
          }
       }
@@ -175,10 +168,8 @@ public class Hand {
 
    // Is this hand three of a kind (also called a set or trips in poker)?
    public boolean isThreeOfaKind() {
-      Integer rank;
       for(Card card : hand) {
-         rank = card.getRank();
-         if(rankFrequency.get(rank) == 4 && !isFullHouse()) {
+         if(rankFrequency.get(card.getRank()) == 4 && !isFullHouse()) {
             return true;
          }
       }
