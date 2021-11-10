@@ -127,7 +127,10 @@ public class Hand {
    public boolean isFourOfaKind() {
       Integer rank;
       for(Card card : hand) {
+         // get the rank of each card
          rank = card.getRank();
+         // if the rank frequency of all the cards are 4 (meaning there are 4 cards with the same rank)
+         // for a isFourOfaKind it'll go rankFrequency (1 then 2 then 3 then 4)
          if(rankFrequency.get(rank) == 4) {
             return true;
          }
@@ -136,6 +139,7 @@ public class Hand {
    }
 
    // Is this hand a full house (3 cards of the same rank & 2 cards of the same rank)?
+   // if the rankFrequency size is 2, then there HAS to be 2 distinct groups of cards
    public boolean isFullHouse() {
       return rankFrequency.size() == 2;
    }
@@ -145,10 +149,13 @@ public class Hand {
       Card card1 = hand.get(0);
       char suit = card1.getSuit();
       int suitCounter = 0;
+      // go through each hand of the card
       for(Card card : hand) {
+         // if the card in the hand equals the suit of the first card then you increment the counter
          if(card.getSuit() == suit) {
             suitCounter++;
          }
+         // eventually if the counter reaches 5 (means all 5 card share the same suit) then it is true
          if(suitCounter==5) {
             return true;
          }
@@ -159,49 +166,59 @@ public class Hand {
    // Is this hand a straight? (Can also be a flush.)
    public boolean isStraight() {
       for(int i=1; i<getCardRanks().length-1; i++) {
+         // if I see that the next card is not decreasing in the overall index then I return false
          if(getCardRanks()[i] != getCardRanks()[i-1] - 1) {
             return false;
          }
       }
+      // if it makes it through the entire loop in a decreasing manner then it is straight
       return true;
    }
 
    // Is this hand three of a kind (also called a set or trips in poker)?
    public boolean isThreeOfaKind() {
+      // go through all the cards in the hand
       for(Card card : hand) {
-         if(rankFrequency.get(card.getRank()) == 4 && !isFullHouse()) {
+         // If the rankFrequency of the card is 3 (there's 3 of that value) and it's not a full house then it's three of a kind
+         if(rankFrequency.get(card.getRank()) == 3 && !isFullHouse()) {
             return true;
          }
       }
-      return false; // delete this line and substitute it with your code
+      return false;
    }
 
    // Does this hand contain exactly two pairs?
    public boolean isTwoPair() {
       Integer rank;
       int pairCounter = 0;
+      // go through all the cards in the hand
       for(Card card : hand) {
          rank = card.getRank();
+         // if there are 2 of the same ranks then you increment by 1
          if(rankFrequency.get(rank) == 2) {
             pairCounter++;
          }
       }
+      // if pair counter is 4 (that means that there 2 pairs counted)
       if(pairCounter==4) {
          return true;
       }
-      return false; // delete this line and substitute it with your code
+      return false;
    }
 
    // Does this hand contain exactly one pair?
    public boolean isPair() {
       Integer rank;
+      // go through all the cards in the hand
       for(Card card : hand) {
          rank = card.getRank();
+         // if there is a pair of cards (aka the rankFrequency.get(rank) is 2)
+         // and is not 2 pair and not a full house
          if(rankFrequency.get(rank) == 2 && !isTwoPair() &&!isFullHouse()) {
             return true;
          }
       }
-      return false; // delete this line and substitute it with your code
+      return false;
    }
 
    // A nothing hand
