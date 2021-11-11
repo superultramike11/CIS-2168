@@ -25,8 +25,14 @@ public class CompareDistinctCategoryHands {
             }
 
             // If players tie then it calculates who has the highest card
-            else {
-               //playerWithHigherCards(hand1, hand2, p1wins);
+            else if (hand1.getHandValue() == hand2.getHandValue()) {
+               hand1.playerWithHigherCards();
+               hand2.playerWithHigherCards();
+               /*
+               if() {
+
+               }
+               */
             }
          }
          System.out.println("Number of hands won by player 1: " + p1wins);

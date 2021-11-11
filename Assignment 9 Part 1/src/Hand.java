@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Hand {
+public class Hand implements Comparable<Hand> {
    /*************************** Public static field ***************************/
    // the name of this hand
    public static Map<Integer, String> nameMap = Map.of(
@@ -230,4 +230,13 @@ public class Hand {
 
    @Override
    public String toString() { return hand.toString(); }
+
+   @Override
+   public int compareTo(Hand o) {
+      return playerWithHigherCards();
+   }
+
+   public int playerWithHigherCards() {
+      return 0;
+   }
 }
