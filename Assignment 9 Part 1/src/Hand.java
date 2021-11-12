@@ -231,12 +231,36 @@ public class Hand implements Comparable<Hand> {
    @Override
    public String toString() { return hand.toString(); }
 
+   // this = player 1
+   // h = player 2
    @Override
-   public int compareTo(Hand o) {
-      return playerWithHigherCards();
-   }
+   public int compareTo(Hand h) {
+      // if player 1 has a better hand then player 2
+      if(this.handValue != h.handValue) {
+         return this.handValue - h.handValue;
+      }
+      else {
+         if(isStraightFlush() || isStraight()) {
+            return this.cardRanks[0] - h.cardRanks[0];
+         }
+         else if(isFlush()) {
+            for(int i=0; i<this.cardRanks.length; i++) {
+               if(this.cardRanks[i] == h.cardRanks[i]) {
+                  continue;
+               }
+               else {
+                  return this.cardRanks[i] - h.cardRanks[i];
+               }
+            }
+         }
+         else if(isFullHouse()|| isFourOfaKind() || isThreeOfaKind()) {
+            return this.cardRanks[2] - h.cardRanks[2];
+         }
 
-   public int playerWithHigherCards() {
+         else {
+            return 0;
+         }
+      }
       return 0;
    }
 }
