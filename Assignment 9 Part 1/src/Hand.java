@@ -257,6 +257,35 @@ public class Hand implements Comparable<Hand> {
             return this.cardRanks[2] - h.cardRanks[2];
          }
 
+         else if(isPair() || isTwoPair()) {
+            int hand1HighestPair = 0;
+            int hand2HighestPair = 0;
+
+            // Find the biggest pair for comparison
+            for(int i=1; i< cardRanks.length; i++) {
+               if (this.cardRanks[i] == this.cardRanks[i-1] && this.cardRanks[i] > hand1HighestPair) {
+                  hand1HighestPair = this.cardRanks[i];
+               }
+               if(h.cardRanks[i] == h.cardRanks[i-1] && h.cardRanks[i] > hand2HighestPair) {
+                  hand2HighestPair = h.cardRanks[i];
+               }
+            }
+
+            // if the pairs are equal then it finds the highest card to compare
+            if (hand1HighestPair == hand2HighestPair) {
+               for(int i=0; i< cardRanks.length; i++) {
+                  if (this.cardRanks[i] == h.cardRanks[i]) {
+                     continue;
+                  }
+                  else {
+                     return this.cardRanks[i] - h.cardRanks[i];
+                  }
+               }
+            } else {
+               return hand1HighestPair - hand2HighestPair;
+            }
+         }
+
          else {
             return 0;
          }

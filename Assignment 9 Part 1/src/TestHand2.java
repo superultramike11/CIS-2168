@@ -5,7 +5,6 @@ public class TestHand2 {
    public static void main(String[] args) {
       String msg;  // message to print (comparison result)
 
-      /*
       // TEST GROUP 1: comparing hands of unequal ranks (easiest)
       // test 1-1: comparing a straight flush to a full house
       Hand sf = new Hand("AS KS QS TS JS"); // straight flush (winner)
@@ -18,8 +17,7 @@ public class TestHand2 {
       else msg = "equal hands";
       System.out.println(msg);
       System.out.println("--------------------");
-       */
-      /*
+
       // test 1-2: comparing a 3-of-a-kind to a 4-of-a-kind
       Hand kind3 = new Hand("TS 2S 4S TH TC"); // three of a kind
       System.out.println("kind3: " + Arrays.toString(kind3.getCardRanks()));
@@ -30,9 +28,7 @@ public class TestHand2 {
       else msg = "equal hands";
       System.out.println(msg);
       System.out.println("--------------------");
-      */
 
-      /*
       // test 1-3: comparing a flush to a straight
       Hand fl = new Hand("TS 2S 5S AS KS"); // flush (winner)
       System.out.println("fl: " + Arrays.toString(fl.getCardRanks()));
@@ -43,9 +39,7 @@ public class TestHand2 {
       else msg = "equal hands";
       System.out.println(msg);
       System.out.println("--------------------");
-       */
 
-      /*
       // test 1-4: comparing a pair to a nothing hand
       Hand pair = new Hand("TS 2S 5S AS TC"); // pair (winner)
       System.out.println("pair: " + Arrays.toString(pair.getCardRanks()));
@@ -56,9 +50,8 @@ public class TestHand2 {
       else msg = "equal hands";
       System.out.println(msg);
       System.out.println("--------------------");
-      */
 
-      /*
+
       // test 1-4: comparing a pair to a nothing hand
       Hand pair2 = new Hand("KS 2S 5S 2H KC"); // pair (winner)
       System.out.println("two-pair: " + Arrays.toString(pair2.getCardRanks()));
@@ -69,9 +62,7 @@ public class TestHand2 {
       else msg = "equal hands";
       System.out.println(msg);
       System.out.println("--------------------");
-      */
 
-      /*
       // TEST GROUP 2: comparing hands of equal ranks
       // test 2-1: comparing a straight flush to a straight flush
       Hand sf1 = new Hand("AS KS QS TS JS"); // straight flush 1 (winner)
@@ -83,9 +74,7 @@ public class TestHand2 {
       else msg = "equal hands";
       System.out.println(msg);
       System.out.println("--------------------");
-      */
 
-      /*
       // test 2-2: comparing a four-of-a-kind to a four-of-a-kind
       Hand kind41 = new Hand("KS KH QS KC KD"); // four-of-a-kind 1 (winner)
       System.out.println("kind4 1: " + Arrays.toString(kind41.getCardRanks()));
@@ -96,7 +85,6 @@ public class TestHand2 {
       else msg = "equal hands";
       System.out.println(msg);
       System.out.println("--------------------");
-      */
 
       // test 2-3: comparing a three-of-a-kind to a three-of-a-kind
       Hand kind31 = new Hand("TS TH QS TC AD"); // three-of-a-kind 1
@@ -109,7 +97,6 @@ public class TestHand2 {
       System.out.println(msg);
       System.out.println("--------------------");
 
-      /*
       // test 2-3a: comparing two-pair hands
       Hand tp1 = new Hand("JS JC AH KD KS"); // two-pair 1: Kings and Jacks
       System.out.println("tp1: " + Arrays.toString(tp1.getCardRanks())); // [14, 13, 13, 11, 11]
@@ -153,6 +140,5 @@ public class TestHand2 {
       else msg = "equal hands";
       System.out.println(msg);
       System.out.println("--------------------");
-       */
    }
 }
