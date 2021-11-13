@@ -2,17 +2,16 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class PhoneBook {
     // The file from which to read data (change the filename here)
     In in = new In("bigfile1.txt");
 
     // Keep list of all existing (i.e. not deleted yet) contacts.
-    List<Contact> contacts = new ArrayList<>();
+    //List<Contact> contacts = new ArrayList<>();
+
+    HashMap<Integer, String> contacts = new HashMap<Integer, String>();
 
     public static void main(String[] args) {
         // start timer
@@ -49,29 +48,16 @@ public class PhoneBook {
         if (query.type.equals("add")) {
             // if a contact with this number exists,
             // overwrite the contact's name
-            boolean wasFound = false;
-            for (Contact contact : contacts)
-                if (contact.number == query.number) {
-                    contact.name = query.name;
-                    wasFound = true;
-                    break;
-                }
-            // otherwise, just add it
-            if (!wasFound)
-                contacts.add(new Contact(query.name, query.number));
+            contacts.put(query.number, query.name);
         } else if (query.type.equals("del")) {
-            for (Iterator<Contact> it = contacts.iterator(); it.hasNext(); )
-                if (it.next().number == query.number) {
-                    it.remove();
-                    break;
-                }
+            if(contacts.containsKey(query.number)) {
+                contacts.remove(query.number);
+            }
         } else {
             String response = "not found";
-            for (Contact contact: contacts)
-                if (contact.number == query.number) {
-                    response = contact.name;
-                    break;
-                }
+            if(contacts.containsKey(query.number)) {
+                response = contacts.get(query.number);
+            }
             System.out.println(response);
         }
     }
@@ -109,7 +95,7 @@ public class PhoneBook {
 
         In(String filename) {
             try {
-                scanner = new Scanner(new BufferedInputStream(new FileInputStream(new File("sample1.txt"))));
+                scanner = new Scanner(new BufferedInputStream(new FileInputStream(new File("bigfile.txt"))));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
