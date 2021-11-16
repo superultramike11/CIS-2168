@@ -236,6 +236,7 @@ public class Hand implements Comparable<Hand> {
    @Override
    public int compareTo(Hand h) {
       // if player 1 has a better hand then player 2
+      // if they arent the same just compare to see who wins
       if(this.handValue != h.handValue) {
          return this.handValue - h.handValue;
       }
@@ -285,7 +286,6 @@ public class Hand implements Comparable<Hand> {
                return hand1HighestPair - hand2HighestPair;
             }
          }
-
          else {
             return 0;
          }
