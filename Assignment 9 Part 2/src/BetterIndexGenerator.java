@@ -28,7 +28,10 @@ public class BetterIndexGenerator {
          // while there are more words to read
          while(st.hasMoreTokens()) {
             word = st.nextToken(); // when a word is scanned assign it to word
-            List<Integer> lines = wordToListMap.getOrDefault(word, new ArrayList<>()); // create a List to store multiple occurrences of the same word (this is like having 2 names in the same index)
+
+            // create a List to store multiple occurrences of the same word (this is like having 2 names in the same index)
+            List<Integer> lines = wordToListMap.getOrDefault(word, new ArrayList<>());
+
             lines.add(lineNum); // add the line number to lines list
             wordToListMap.put(word, lines); // then put the final product into the map
          }
