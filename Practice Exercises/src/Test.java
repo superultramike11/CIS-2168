@@ -2,16 +2,13 @@ import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
-        TreeSet<String> s = new TreeSet<>();
-        TreeSet<String> subs = new TreeSet<>();
-        s.add("a"); s.add("b"); s.add("c"); s.add("d"); s.add("e");
-        subs = (TreeSet) s.subSet("b", true, "d", true);
-        System.out.println(subs);
-        s.add("g");
-        s.pollFirst();
-        s.pollFirst();
-        s.add("c2");
-        System.out.println(s.size() + " " + subs.size());
-        System.out.println(subs);
+        int n = 50;
+        Stack<Integer> s = new Stack<>();
+        while (n > 0) {
+            System.out.println(n + " " + s.push(n % 2));
+            n = n / 2;
+        }
+        while (!s.isEmpty())
+            System.out.print(s.pop());
     }
 }
