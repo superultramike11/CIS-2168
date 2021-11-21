@@ -2,15 +2,11 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Locale;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+import java.util.*;
 import java.util.regex.Pattern;
 
 /**
- *  In. This class provides methods for reading strings
+ *  p2.In. This class provides methods for reading strings
  *  and numbers from standard input and file inputs.
  *
  *  The Locale used is: language = English, country = US.
@@ -113,7 +109,7 @@ public final class In {
         scanner.useDelimiter(EMPTY_PATTERN);
         try {
             String ch = scanner.next();
-            assert ch.length() == 1 : "Internal (Std)In.readChar() error!"
+            assert ch.length() == 1 : "Internal (Std)p2.In.readChar() error!"
                     + " Please contact the authors.";
             scanner.useDelimiter(WHITESPACE_PATTERN);
             return ch.charAt(0);
@@ -248,7 +244,7 @@ public final class In {
     public void close() { scanner.close(); }
 
 
-    // Unit tests the In data type.
+    // Unit tests the p2.In data type.
     public static void main(String[] args) {
         In in;
         // read one line at a time from file in current directory
@@ -302,7 +298,7 @@ public final class In {
 //        System.out.println("readLine() from absolute OS X / Linux path");
 //        System.out.println("---------------------------------------------------------------------------");
 //        try {
-//            in = new In("/Users/david/InTest.txt");
+//            in = new p2.In("/Users/david/InTest.txt");
 //            while (!in.isEmpty()) {
 //                String s = in.readLine();
 //                System.out.println(s);
