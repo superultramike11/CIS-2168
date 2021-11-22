@@ -3,8 +3,6 @@
 	which is an array of int, and an int passingScore. 
 	The method returns the number of items in A[] which are greater than or equal to passingScore.
 */
-import java.io.*;
-import java.util.*;
 
 public class examArray1 {
 	public static void main(String[] args) {
