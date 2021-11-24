@@ -21,7 +21,7 @@ public class Reachability {
     }
 
     public static void main(String[] args) {
-        In in = new In("G1-3.txt");
+        In in = new In("G1-1.txt");
         int n = in.readInt();  // number of vertices
         int m = in.readInt();  // number of edges
 
@@ -44,8 +44,8 @@ public class Reachability {
 
         // read the last line of the input file.
         // x = the start vertex; y = the end vertex
-        int x = in.readInt() - 1;
-        int y = in.readInt() - 1;
+        int x = in.readInt() - 1; // 0
+        int y = in.readInt() - 1; // 3
         // is y reachable from x
         System.out.println(reach(adj, x, y));
     }

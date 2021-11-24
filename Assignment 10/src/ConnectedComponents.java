@@ -20,7 +20,7 @@ public class ConnectedComponents {
     }
 
     public static void main(String[] args) {
-        In in = new In("G2-1.txt");
+        In in = new In("G2-3 (1).txt");
         int n = in.readInt();
         int m = in.readInt();
         ArrayList<Integer>[] adj = (ArrayList<Integer>[])new ArrayList[n];

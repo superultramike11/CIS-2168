@@ -45,7 +45,7 @@ public class D {
     }
 
     public static void main(String[] args) {
-        In in = new In("G4-3.txt");
+        In in = new In("G4-1.txt");
         int n = in.readInt();
         int m = in.readInt();
         ArrayList<Integer>[] adj = (ArrayList<Integer>[])new ArrayList[n];
