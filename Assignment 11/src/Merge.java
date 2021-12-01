@@ -13,16 +13,13 @@
  ******************************************************************************/
 
 //  The Merge class provides static methods for sorting an array of integers
-//  using mergesort. See Merge2 for a class that sorts an array of comparable
-//  objects.
+//  using mergesort. See Merge2 for a class that sorts an array of comparable objects.
 public class Merge {
-
    // This class should not be instantiated.
    private Merge() { }
 
    // stably merge a[lo .. mid] with a[mid+1 ..hi] using aux[lo .. hi]
    private static void merge(int[] a, int[] aux, int lo, int mid, int hi) {
-
       // copy to aux[]
       for (int k = lo; k <= hi; k++) {
          aux[k] = a[k];
@@ -31,10 +28,10 @@ public class Merge {
       // merge back to a[]
       int i = lo, j = mid+1;
       for (int k = lo; k <= hi; k++) {
-         if      (i > mid)              a[k] = aux[j++];
-         else if (j > hi)               a[k] = aux[i++];
-         else if (aux[j] < aux[i])      a[k] = aux[j++];
-         else                           a[k] = aux[i++];
+         if      (i > mid)              a[k] = aux[j++]; // left sub-array border check
+         else if (j > hi)               a[k] = aux[i++]; // right sub-array border check
+         else if (aux[j] < aux[i])      a[k] = aux[j++]; // put smaller element in aux array
+         else                           a[k] = aux[i++]; // if none, put element in aux array
       }
    }
 
@@ -42,9 +39,9 @@ public class Merge {
    private static void sort(int[] a, int[] aux, int lo, int hi) {
       if (hi <= lo) return;
       int mid = lo + (hi - lo) / 2;
-      sort(a, aux, lo, mid);
-      sort(a, aux, mid + 1, hi);
-      merge(a, aux, lo, mid, hi);
+      sort(a, aux, lo, mid); // sort left sub-array
+      sort(a, aux, mid + 1, hi); // sort right sub-array
+      merge(a, aux, lo, mid, hi); // merge the two sub-arrays back together
    }
 
    // Rearranges the array in ascending order, using the natural order.
@@ -53,7 +50,6 @@ public class Merge {
       sort(a, aux, 0, a.length-1);
    }
 
-
    // print array to standard output
    private static void show(int[] a) {
       for (int i = 0; i < a.length; i++) {
@@ -61,7 +57,7 @@ public class Merge {
       }
    }
 
-   // Reads in a sequence of strings from standard input; mergesorts them;
+   // Reads in a sequence of strings from standard input; merge sorts them;
    // and prints them to standard output in ascending order.
    public static void main(String[] args) {
       In in = new In("10ints.txt");
