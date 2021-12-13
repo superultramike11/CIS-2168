@@ -2,11 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69ba958d-1d3f-4601-8d8a-6f6cd7d23129" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Puppy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SideEffect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MergeHashMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PreOrderTreeLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/10 - Graphs/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/10 - Graphs/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/10 - Graphs/src/Reachability.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/10 - Graphs/src/Reachability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/11 - Sorting/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/11 - Sorting/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/4.2 - Full List/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/4.2 - Full List/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/Assignment 6.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/Assignment 6.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/out/production/Assignment 6/BracketMatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/out/production/Assignment 6/BracketMatcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/out/production/Assignment 6/BracketMatcher2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/out/production/Assignment 6/BracketMatcher2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/out/production/Assignment 6/In.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/out/production/Assignment 6/In.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/out/production/Assignment 6/SumQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/out/production/Assignment 6/SumQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/out/production/Assignment 6/SunsetViews.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/out/production/Assignment 6/SunsetViews.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/out/production/Assignment 6/SunsetViewsNoStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/out/production/Assignment 6/SunsetViewsNoStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/src/BracketMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/src/BracketMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/src/BracketMatcher2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/src/BracketMatcher2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/src/In.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/src/In.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/src/SumQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/src/SumQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/src/SunsetViews.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/src/SunsetViews.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/src/SunsetViewsNoStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/src/SunsetViewsNoStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test01.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test02.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test03.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test04.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test05.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test06.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test06.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test07.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test07.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test08.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test08.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test09.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test09.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test100.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test100.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test11.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/6 - Queues/test12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/6 - Queues &amp; Stacks/test12.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/7.1 - Trees/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/7.1 - Trees/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practice Exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Practice Exercises.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +68,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignments" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -44,9 +78,16 @@
       <recent name="C:\Users\micha\Desktop\Coding\Java\Practice Exercises" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SideEffect">
-    <configuration name="Lottery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lottery" />
+  <component name="RunManager" selected="Application.BinaryTree">
+    <configuration name="BinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BinaryTree" />
+      <module name="Practice Exercises" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeHashMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MergeHashMap" />
       <module name="Practice Exercises" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -73,27 +114,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hasDuplicates" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hasDuplicates" />
-      <module name="Practice Exercises" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.Lottery" />
       <item itemvalue="Application.Puppy" />
       <item itemvalue="Application.SideEffect" />
       <item itemvalue="Application.Test" />
-      <item itemvalue="Application.hasDuplicates" />
+      <item itemvalue="Application.MergeHashMap" />
+      <item itemvalue="Application.BinaryTree" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BinaryTree" />
+        <item itemvalue="Application.MergeHashMap" />
         <item itemvalue="Application.SideEffect" />
         <item itemvalue="Application.Puppy" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Lottery" />
-        <item itemvalue="Application.hasDuplicates" />
       </list>
     </recent_temporary>
   </component>

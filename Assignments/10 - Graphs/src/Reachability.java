@@ -9,9 +9,6 @@ public class Reachability {
         else return 0;
     }
 
-    // Hint: review depth-first search (dfs). It may be 'cleaner' to write a
-    // separate helper method (dfs) and call it from your code in reach().
-    // Alternatively, you can keep all your logic in reach(), if you wish.
     private static void dfs(ArrayList<Integer>[] adj, int v, boolean[] marked) {
         marked[v] = true;
         for (int w: adj[v]) {
