@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69ba958d-1d3f-4601-8d8a-6f6cd7d23129" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/RomanToInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Wordle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/reverse.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/reverse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reverse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reverse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/reverse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reverse.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,7 @@
       <recent name="C:\Users\micha\Desktop\Coding\Java\Practice Exercises" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.reverse">
+  <component name="RunManager" selected="Application.Wordle">
     <configuration name="BinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BinaryTree" />
       <module name="Practice Exercises" />
@@ -65,8 +65,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SideEffect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SideEffect" />
+    <configuration name="Wordle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Wordle" />
       <module name="Practice Exercises" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -80,19 +80,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SideEffect" />
       <item itemvalue="Application.MergeHashMap" />
       <item itemvalue="Application.BinaryTree" />
       <item itemvalue="Application.RomanToInteger" />
       <item itemvalue="Application.reverse" />
+      <item itemvalue="Application.Wordle" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Wordle" />
         <item itemvalue="Application.reverse" />
         <item itemvalue="Application.RomanToInteger" />
         <item itemvalue="Application.BinaryTree" />
         <item itemvalue="Application.MergeHashMap" />
-        <item itemvalue="Application.SideEffect" />
       </list>
     </recent_temporary>
   </component>
